@@ -9,4 +9,10 @@ public class DatabaseConnectionManager {
     private static String username;
     private static String password;
     private static Connection conn;
+
+    //Metoder
+
+    public static Connection getConnection(){
+
+    }
 }
