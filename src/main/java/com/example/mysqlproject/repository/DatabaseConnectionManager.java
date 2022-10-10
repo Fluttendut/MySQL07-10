@@ -15,9 +15,9 @@ public class DatabaseConnectionManager {
     //Metoder
 
     public static Connection getConnection(){
-        hostname = "jdbc:mysql://mysqlproject.mysql.database.azure.com";
+        hostname = "jdbc:mysql://mysqlproject.mysql.database.azure.com/kea";
         username = "Fluttendut";
-        password = "xxx";
+        password = "Machoyuna92";
 
         try {
             conn = DriverManager.getConnection(hostname, username, password);
