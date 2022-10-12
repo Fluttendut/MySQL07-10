@@ -6,5 +6,7 @@ public class Test {
         StudentRepository repo = new StudentRepository();
 
         System.out.println(repo.getAlStudents());
+
+        System.out.println(repo.getStudent(3));
     }
 }

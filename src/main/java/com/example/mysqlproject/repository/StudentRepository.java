@@ -36,4 +36,26 @@ public class StudentRepository {
 
         return student;
     }
+    public Student getStudent(int id){
+
+        try {
+            PreparedStatement psts = conn.prepareStatement("SELECT * FROM Student WHERE id = ?");
+            psts.setInt(1, id);
+            ResultSet resultSet = psts.executeQuery();
+
+            if(resultSet.next()){
+                return new Student (
+                        resultSet.getInt("id"),
+                        resultSet.getString("name"),
+                        resultSet.getString("email"),
+                        resultSet.getBoolean("gender")
+                );
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return null;
+    }
 }
